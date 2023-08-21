@@ -104,10 +104,8 @@ def predict(image):
     output_data = interpreter.get_tensor(output_details[0]['index'])
     probabilities = np.array(output_data[0])
 
-    labels = {0: "healthy", 1: "leaf blight", 2: "leaf curl", 3: "septoria leaf spot", 4: "verticulium wilt" }
-    label_new=["healthy", "leaf blight", "leaf curl", "septoria leaf spot", "verticulium wilt" ]
-
-
+    labels = {0: "bacterial blight", 1: "brown spot", 2: "green mite", 3: "healthy", 4: "mosaic", 5: "non type" }
+    label_new=["bacterial blight", "brown spot", "green mite", "healthy", "mosaic", "non type" ]
 
 
     label_to_probabilities = []
