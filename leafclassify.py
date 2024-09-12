@@ -15,7 +15,7 @@ import base64
 
 
 # fig = plt.figure()
-st.title(':white[AI4AFS-UENR]')
+st.title('"<h1 style='color: red;'>AI4AFS-UENR</h1>"], unsafe_allow_html=True')
 st.header(':white[cassava Disease/Pest Detection App]')
 
 #st.markdown("Prediction Platform")
