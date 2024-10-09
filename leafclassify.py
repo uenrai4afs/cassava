@@ -4,7 +4,7 @@ from PIL import Image
 # import tensorflow_hub as hub
 import tensorflow as tf
 import numpy as np
-from tensorflow import keras
+#from tensorflow import keras
 from keras.models import *
 from keras import preprocessing
 import time
