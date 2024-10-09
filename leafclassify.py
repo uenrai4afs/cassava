@@ -54,7 +54,16 @@ def main():
 
                 time.sleep(1)
                 st.success('Results')
-                st.write(predictions)
+                #st.write(predictions)
+                st.markdown(
+                    f"""
+                    <p style='color: black;'>
+                        Category: {predictions['category']}<br>
+                        Confidence: {predictions['confidence']}
+                    </p>
+                    """,
+                    unsafe_allow_html=True
+                )
 
 
 ## This code is for saved model in format as H5 file
