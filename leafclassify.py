@@ -54,17 +54,7 @@ def main():
 
                 time.sleep(1)
                 st.success('Results')
-                #st.write(predictions)
-                st.markdown(
-                    f"""
-                    <p style='color: black;'>
-                        Category: {predictions['category']}<br>
-                        Confidence: {predictions['confidence']}
-                    </p>
-                    """,
-                    unsafe_allow_html=True
-                )
-
+                st.write(predictions)
 
 ## This code is for saved model in format as H5 file
 
@@ -131,7 +121,13 @@ def predict(image):
     high=np.argmax(probabilities)
     result_1=label_new[high]
     confidence=100 * np.max(probabilities)
-    result="Category:"+ "  "+str(result_1) +"     "+ "\n Confidence: "+ " "+ str(confidence)+ "%"
+    #result="Category:"+ "  "+str(result_1) +"     "+ "\n Confidence: "+ " "+ str(confidence)+ "%" 
+    result = f"""
+    <span style='color: black;'>
+        Category: <strong>{result_1}</strong><br>
+        Confidence: <strong>{confidence:.2f}%</strong>
+    </span>
+    """
 
     return result
 
