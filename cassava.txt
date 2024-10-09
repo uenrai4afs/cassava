@@ -1,0 +1,6 @@
+0 bacterial blight
+1 brown spot
+2 green mite
+3 healthy
+4 mosaic
+5 non type
