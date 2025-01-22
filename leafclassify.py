@@ -39,7 +39,7 @@ def main():
     file_uploaded = st.file_uploader("Choose File", type=["png", "jpg", "jpeg"])
     
     if file_uploaded is not None:
-        image = Image.open(file_uploaded)
+        image = Image.open(file_uploaded).convert('RGB')
         st.image(image, caption='Uploaded Image', use_column_width=False)
     class_btn = st.button("Detect")
     if class_btn:
